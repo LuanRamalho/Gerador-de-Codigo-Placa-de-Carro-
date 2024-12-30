@@ -5,9 +5,9 @@ import string
 def gerar_codigo_placa():
     # Gerar código de placa aleatório no formato AAA-00A0
     prefixo = ''.join(random.choices(string.ascii_uppercase, k=3))
-    numeros1 = ''.join(random.choices(string.digits, k=2))
+    numeros1 = ''.join(random.choices(string.digits, k=1))
     sufixo = ''.join(random.choices(string.ascii_uppercase, k=1))
-    numeros2 = ''.join(random.choices(string.digits, k=1))
+    numeros2 = ''.join(random.choices(string.digits, k=2))
     codigo_placa = f"{prefixo}-{numeros1}{sufixo}{numeros2}"
     label_resultado.config(text=codigo_placa)
 
